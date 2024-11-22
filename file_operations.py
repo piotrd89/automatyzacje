@@ -58,12 +58,12 @@ def excel_to_csv(input_folder: str, output_folder: str) -> None:
     print(f'Przetworzona liczba plików: {count_files}')
 
     # Przykład użycia funkcji konwertującej pliki xls, xlsx do formatu csv
-    # input_folder = 'c:\\Users\\piotr.domagala\\Desktop\\pepai_dane'
-    # output_folder = 'c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\dane_csv'
+    # input_folder = 'ścieżka\\do\\input'
+    # output_folder = 'ścieżka\\do\\output'
     # excel_to_csv(input_folder, output_folder)
 
     # Sprawdzamy przy pomocy modułu Pandas, czy przykładowy plik csv jest poprawny
-    # tdf = pd.read_csv('C:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\SCADA_poprawione 02.08.2024\\430024_1_2022.csv', delimiter=';')
+    # tdf = pd.read_csv('ścieżka\\do\\folderu_z_plikami\plik.csv', delimiter=';')
     # tdf.head()
 
 def csv_to_excel_progressbar(input_folder: str, output_folder: str, delimiter: str, output_extension: str) -> None:
@@ -118,7 +118,7 @@ def csv_to_excel_progressbar(input_folder: str, output_folder: str, delimiter: s
     
     #print(f'Przekonwertowanych plików: {count_files}')
 
-# csv_to_excel_progressbar('c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\SCADA_poprawione 02.08.2024', 'c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\pliki_excel',';','.xlsx')
+# csv_to_excel_progressbar('ścieżka\\do\\input\\pliki_csv', 'ścieżka\\do\\output\\pliki_excel',';','.xlsx')
 
 def csv_to_excel(input_folder: str, output_folder: str, delimiter: str, output_extension: str) -> None:
     """
@@ -168,7 +168,7 @@ def csv_to_excel(input_folder: str, output_folder: str, delimiter: str, output_e
                 
     print(f'Przekonwertowano plików: {count_files}')
   
-# csv_to_excel('c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\SCADA_poprawione 02.08.2024', 'c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\pliki_excel',';','.xlsx')
+# csv_to_excel('ścieżka\\do\\input', 'ścieżka\\do\\output',';','.xlsx')
 
 def download_from_folder(input_path: str, output_folder: str, file_extensions: list) -> None:
     """
@@ -222,4 +222,4 @@ def download_from_folder(input_path: str, output_folder: str, file_extensions: l
     print(f'Skopiowanych plików: {count_copies}')
 
 # Przykład użycia funkcji kopiującej wszystkie pliki xls,xlsx z zadanej lokalizacji do wskazanego folderu docelowego
-# download_from_folder('c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\DG','c:\\Users\\piotr.domagala\\Desktop\\pepai_dane\\kopia_DG',['.xls','.xlsx'])
+# download_from_folder('ścieżka\\do\\input','ścieżka\\do\\output',['.xls','.xlsx'])
